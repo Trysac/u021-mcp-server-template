@@ -1,20 +1,15 @@
 /**
  * Public entry point of @trysac/mcp-server-template.
  *
- * Replace this placeholder with the utility's real API. Keep every export documented and covered by tests.
+ * A hardened MCP server skeleton: zod-validated tools with timeouts and output caps,
+ * bearer-token authentication, Origin checks, request size and rate limits, and a
+ * stateless Streamable HTTP transport bound to localhost by default.
  */
-
-/**
- * Builds a greeting for `name`.
- *
- * @param name - Who to greet. Surrounding whitespace is ignored.
- * @returns The greeting, for example `"Hello, Ada!"`.
- * @throws {TypeError} When `name` is empty after trimming.
- */
-export function greet(name: string): string {
-  const trimmed = name.trim();
-  if (trimmed === "") {
-    throw new TypeError("name must not be empty");
-  }
-  return `Hello, ${trimmed}!`;
-}
+export * from "./auth.js";
+export * from "./echo.js";
+export * from "./errors.js";
+export * from "./http.js";
+export * from "./logger.js";
+export * from "./ratelimit.js";
+export * from "./server.js";
+export * from "./tool.js";
