@@ -1,7 +1,6 @@
 # mcp-server-template
 
-[![npm version](https://img.shields.io/npm/v/@trysac/mcp-server-template.svg)](https://www.npmjs.com/package/@trysac/mcp-server-template)
-[![license: MIT](https://img.shields.io/npm/l/@trysac/mcp-server-template.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/Trysac/u021-mcp-server-template/actions/workflows/ci.yml/badge.svg)](https://github.com/Trysac/u021-mcp-server-template/actions/workflows/ci.yml)
 
 Hardened TypeScript MCP server template: zod tool schemas, Streamable HTTP on localhost with Origin checks, bearer tokens, size and rate limits, timeouts and tests.
@@ -12,9 +11,15 @@ Teams starting an MCP server copy a quickstart that has no authentication, no Or
 
 ## Install
 
+Not published to npm yet. Build it from a clone, then install it from the local path:
+
 ```sh
-npm install @trysac/mcp-server-template
+git clone https://github.com/Trysac/u021-mcp-server-template.git
+cd u021-mcp-server-template && npm ci && npm run build
+cd ../your-project && npm install ../u021-mcp-server-template
 ```
+
+Imports keep the package name: `import { ... } from "@trysac/mcp-server-template"`.
 
 Requires Node.js 20 or newer. The package ships ES modules with TypeScript declarations. Runtime dependencies are @modelcontextprotocol/sdk (^1.23.0) and zod (^4.1.0).
 
